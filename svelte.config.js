@@ -13,11 +13,8 @@ const config = {
 			// default options are shown
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html'
+			fallback: null
 		}),
-		prerender: {
-			enabled: false
-		},
 		ssr: false
 	}
 };
