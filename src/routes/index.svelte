@@ -1,7 +1,5 @@
 <script lang="ts">
 	import Counter from '$lib/Counter/index.svelte';
-	import Calendar from '$lib/Calendar/Calendar.svelte';
-	import { onMount } from 'svelte';
 </script>
 
 <section>

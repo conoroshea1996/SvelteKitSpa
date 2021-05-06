@@ -15,7 +15,8 @@ const config = {
 			assets: 'build',
 			fallback: 'index.html'
 		}),
-		ssr: false
+		ssr: false,
+		target: '#svelte'
 	}
 };
 
