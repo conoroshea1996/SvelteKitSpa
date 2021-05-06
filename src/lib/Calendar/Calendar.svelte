@@ -1,6 +1,7 @@
 <script>
 	import Calendar from '@event-calendar/core';
 	import TimeGrid from '@event-calendar/time-grid';
+	import { onMount } from 'svelte';
 
 	let plugins = [TimeGrid];
 	let options = {

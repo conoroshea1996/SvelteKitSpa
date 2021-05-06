@@ -1,16 +1,12 @@
+<script context="module">
+	export let ssr = false;
+</script>
+
 <script lang="ts">
 	import Calendar from '$lib/Calendar/Calendar.svelte';
-
 	import Modal from 'hirehive-ui/src/Modal/Modal.svelte';
-	import { onMount } from 'svelte';
-
 	let open = false;
 	let modal;
-
-	let x = false;
-	onMount(() => {
-		x = true;
-	});
 </script>
 
 {#if open}

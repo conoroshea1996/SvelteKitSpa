@@ -1,6 +1,7 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
-
+import fs from 'fs';
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -16,7 +17,11 @@ const config = {
 			fallback: 'index.html'
 		}),
 		ssr: false,
-		target: '#svelte'
+		target: '#svelte',
+		hydrate: false,
+		vite: {
+			noExternal: Object.keys(pkg.dependencies || {})
+		}
 	}
 };
 
